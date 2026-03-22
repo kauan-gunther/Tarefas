@@ -55,7 +55,7 @@ const c = computed(() => tarefa.value.filter(t => t.concluida).length)
     <div class="b">
 
       <div class="c">
-        <input v-model="a" @keyup.enter="add">
+        <input v-model="a" @keyup.enter="add" placeholder="Adicionar Tarefas:">
         <button class="lixo" @click="add">Add</button>
       </div>
 
@@ -80,7 +80,7 @@ const c = computed(() => tarefa.value.filter(t => t.concluida).length)
         </li>
       </ul>
 
-      <input v-model="b" class="filtro" placeholder="Filtrar...">
+      <input v-model="b" class="filtro" placeholder="Filtrar Tarefas">
 
       <div class="c">
         <button class="lixo" @click="tarefa.sort((x, y) => x.titulo.localeCompare(y.titulo))">Ordenar</button>
